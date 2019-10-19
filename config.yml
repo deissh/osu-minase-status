@@ -43,7 +43,7 @@
 
 # What is your status page called?
 # Shows up in the browser bar and meta tags
-title: Eggsample Status
+title: osu!Minase
 
 # Should posts, which have a publish date
 # from the future, be built? Useful for
@@ -64,7 +64,7 @@ buildFuture: true
 #
 # See:  https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 # Also: https://www.w3schools.com/tags/ref_language_codes.asp
-languageCode: en
+languageCode: ru
 
 # What translation file should cState use?
 # You can also define whether missing
@@ -78,7 +78,7 @@ languageCode: en
 # than English! When tested with Lithuanian,
 # it would add unnecesary placeholders to
 # values that were intentionally empty.
-defaultContentLanguage: en
+defaultContentLanguage: ru
 
 # What is the hostname or path to the root?
 # Where is the site hosted?
@@ -90,7 +90,7 @@ defaultContentLanguage: en
 # localhost should automatically work.
 #
 # Example: https://status.example.com/
-baseURL: https://cstate.mnts.lt
+baseURL: https://status.minase.tk
 
 ############################################################
 # +------------------------------------------------------+ #
@@ -105,11 +105,16 @@ params:
   # For help, see the wiki:
   # https://github.com/cstate/cstate/wiki/Customization
   systems:
-    - name: Gateway
-    - name: API
-      description: The guts of the application.
-    - name: Media Proxy
-      description: This is the service responsible for serving images, audio, and video. It is reliant on our CDN.
+    - name: GCP Proxy
+    - name: Bancho
+    - name: OSS
+      description: Osu Score Server
+    - name: Avatar service
+    - name: Discord bots
+    - name: Frontend
+      description: Main website
+    - name: Old Frontend
+      description: For admins
 
   # What date format to use?
   #
@@ -144,22 +149,25 @@ params:
   #
   # Recommended: png, bmp, jpg, or gif
   # for best browser support!
-  logo: /logo.png
+  logo: https://images-ext-2.discordapp.net/external/Yvy2lVhvO4YzUk5FJJ87SIrbRAVCQ7qB0Kw36us_-ag/https/cdn.discordapp.com/icons/632960397359579156/2779944e68a144d0620309d5f1983179.png
 
   # This is the description that is shown
   # on the footer and meta tags.
   #
   # Default: We continuously monitor the status of our services and if there are any interruptions, a note will be posted here.
-  description: We continuously monitor the status of our services and if there are any interruptions, a note will be posted here.
+  description: Custom osu! server
 
   # Tabs on homepage
   # Uncomment to enable.
   #
   # Format:
-  # customTabs:
-  #  -
-  #    name: Name
-  #    link: https://example.com
+  customTabs:
+   -
+     name: Website
+     link: https://minase.tk
+   -
+     name: Discord
+     link: https://discord.gg/qXBEwNq
 
   # Auto refresh the page
   # every ~5 min
